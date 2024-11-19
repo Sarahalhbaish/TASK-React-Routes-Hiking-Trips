@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function TripItem({ trip }) {
   return (
     <div className="col-md-6 col-lg-4 mb-5">
-      <div
+      <Link
+        to={`/tripDetail/${trip.slug}`}
         className="portfolio-item mx-auto"
         data-bs-toggle="modal"
         data-bs-target="#portfolioModal1"
@@ -14,7 +16,7 @@ function TripItem({ trip }) {
           </div>
         </div>
         <img className="img-fluid" src={trip.img} alt="..." />
-      </div>
+      </Link>
     </div>
   );
 }
